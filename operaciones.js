@@ -23,12 +23,13 @@ const consultaCitas = async () =>{
     const citas = await leerCitas();
 
     if(citas.length == 0){
-        console.log("No hay citas registradas en el sistema.");
+        console.log("No hay citas registradas en el sistema.");      
+    }else{
         citas.forEach(e => {
-            console.log(`Nombre: ${e.nombre} ++ Edad: ${e.edad} ++ Tipo: ${e.animal} ++ Color: ${e.color} ++ Enfermedad: ${e.enfermedad} \n`);
+            console.log(`Nombre: ${e.nombre},Edad: ${e.edad},Tipo: ${e.animal},Color: ${e.color},Enfermedad: ${e.enfermedad} \n`);
         });
     }
 }
     
 
-export {registrar}
+export {registrar,consultaCitas}
